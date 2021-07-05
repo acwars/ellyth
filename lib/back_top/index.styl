@@ -1,0 +1,21 @@
+@import "../styles/vars"
+@import "../styles/animate"
+
+$prefixCls = ellyth-back-top
+
+.{$prefixCls}
+    position: fixed
+    bottom: $back-top-offset-bottom
+    right: $back-top-offset-right
+    z-index: 98
+    transition: transform $default-transition
+    display: flex
+    flex-direction: column
+    transform: scale(0)
+
+    &.{$prefixCls}-open
+        animation: cuke-fade-in $default-transition forwards
+
+    &.{$prefixCls}-close
+        animation: cuke-fade-out $default-transition forwards
+
